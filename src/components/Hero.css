@@ -1,0 +1,206 @@
+.hero-wrapper {
+    margin-top: 50px;
+    padding: var(--spacing-xl) 0;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-100);
+}
+
+.hero-container {
+    width: 98%;
+    max-width: 1680px;
+    margin: 0 auto;
+    min-height: 840px;
+    background: linear-gradient(90deg, rgba(0, 50, 25, 0.95) 0%, rgba(0, 50, 25, 0.7) 40%, transparent 70%), url('../assets/img/bg_photo.png');
+    background-size: cover;
+    background-position: center right;
+    border-radius: 32px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 20px 60px rgba(0, 77, 38, 0.15);
+}
+
+.hero-content {
+    max-width: 650px;
+    padding: var(--spacing-2xl) var(--spacing-2xl) var(--spacing-2xl) 60px;
+    z-index: 2;
+}
+
+/* Halal Badge */
+.halal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 100px;
+    margin-bottom: var(--spacing-lg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.halal-icon {
+    font-size: 1rem;
+}
+
+.halal-text {
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Typography */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-title-accent {
+    color: #00FF87;
+    font-weight: 800;
+    display: block;
+    margin-top: 5px;
+    text-shadow: 0 0 40px rgba(0, 255, 135, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: var(--spacing-xl);
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* Trustpilot Widget */
+.trustpilot-widget {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.tp-stars {
+    display: flex;
+    gap: 4px;
+}
+
+.tp-star-box {
+    /* Removed green background for cleaner look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tp-text {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Benefits */
+.hero-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-2xl) 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Improved readability */
+}
+
+.hero-benefits li svg {
+    color: #00FF87;
+    min-width: 24px;
+    filter: drop-shadow(0 0 8px rgba(0, 255, 135, 0.4));
+}
+
+.hero-btn-primary {
+    background: var(--primary-green);
+    color: var(--white);
+    border: none;
+    padding: 1.25rem 3.5rem;
+    border-radius: var(--radius-full);
+    font-size: 1.125rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: 0 10px 30px rgba(0, 255, 135, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 255, 135, 0.4), 0 0 30px rgba(0, 255, 135, 0.3);
+    background: #00FF87;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .hero-container {
+        background-position: 70% center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background: linear-gradient(180deg, rgba(0, 50, 25, 0.95) 0%, rgba(0, 50, 25, 0.85) 60%, rgba(0, 50, 25, 0.6) 100%), url('../assets/img/bg_photo.png');
+        background-size: cover;
+        background-position: center;
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .hero-content {
+        padding: 0 40px;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-btn-primary {
+        width: 100%;
+    }
+}

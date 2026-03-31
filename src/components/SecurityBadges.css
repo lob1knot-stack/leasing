@@ -1,0 +1,103 @@
+.security-section {
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.92);
+    border-top: 1px solid #F0F0F0;
+}
+
+.security-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.security-header {
+    text-align: center;
+}
+
+.security-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+}
+
+.security-subtitle {
+    font-size: 1rem;
+    color: #666666;
+}
+
+.badges-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+}
+
+.security-badge {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 24px;
+    background: #F8F9FA;
+    border-radius: 12px;
+    border: 1px solid #E5E5E5;
+    transition: all 0.3s ease;
+    min-width: 240px;
+}
+
+.security-badge:hover {
+    background: #FFFFFF;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-green);
+}
+
+.badge-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 166, 81, 0.1);
+    color: var(--primary-green);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.badge-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.badge-label {
+    font-weight: 700;
+    color: #1A1A1A;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.badge-desc {
+    font-size: 0.8rem;
+    color: #666666;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .security-section {
+        padding: 40px 0;
+    }
+
+    .security-title {
+        font-size: 1.5rem;
+    }
+
+    .badges-grid {
+        gap: 16px;
+    }
+
+    .security-badge {
+        width: 100%;
+        min-width: unset;
+    }
+}

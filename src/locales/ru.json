@@ -1,0 +1,18 @@
+{
+    "header": {
+        "home": "Главная",
+        "about": "О нас",
+        "leasingItems": "Лизинг",
+        "leaseForConstruction": "Строительная техника",
+        "leaseForProduction": "Производственное оборудование",
+        "leaseForAgriculture": "Сельскохозяйственная техника",
+        "leaseForBusiness": "Бизнес и торговля",
+        "knowledgeCenter": "База знаний",
+        "articles": "Статьи",
+        "calculator": "Калькулятор",
+        "vacancies": "Вакансии",
+        "contacts": "Контакты",
+        "applyNow": "Оставить заявку",
+        "products": "Продукты"
+    }
+}

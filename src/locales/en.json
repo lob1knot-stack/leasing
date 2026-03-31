@@ -1,0 +1,18 @@
+{
+    "header": {
+        "home": "Home",
+        "about": "About",
+        "leasingItems": "Leasing",
+        "leaseForConstruction": "Construction",
+        "leaseForProduction": "Production",
+        "leaseForAgriculture": "Agriculture",
+        "leaseForBusiness": "Business & Trade",
+        "knowledgeCenter": "Knowledge Center",
+        "articles": "Articles",
+        "calculator": "Calculator",
+        "vacancies": "Vacancies",
+        "contacts": "Contacts",
+        "applyNow": "Apply Now",
+        "products": "Products"
+    }
+}

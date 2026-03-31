@@ -1,0 +1,50 @@
+.trust-section {
+    background-color: var(--white);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-2xl);
+}
+
+.stat-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--gradient-light);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-normal);
+}
+
+.stat-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--spacing-lg);
+    background: var(--gradient-green);
+    color: var(--white);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-value {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--gray-600);
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
