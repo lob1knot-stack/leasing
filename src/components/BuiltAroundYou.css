@@ -85,7 +85,7 @@
 /* Process Steps */
 .process-steps {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 40px;
 }
@@ -136,7 +136,8 @@
 .step-arrow {
     font-size: 1.5rem;
     color: var(--gray-300);
-    margin: 0 8px;
+    margin: 20px 8px 0 8px;
+    /* Offset it down to align with icon centers */
 }
 
 /* Benefits Row */

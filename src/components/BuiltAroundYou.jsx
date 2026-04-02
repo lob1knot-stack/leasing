@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { BarChart3, Car, Building2, CreditCard, PartyPopper, Check, Star, Users } from 'lucide-react';
+import { Search, FileText, CreditCard, PartyPopper, Check } from 'lucide-react';
 import './BuiltAroundYou.css';
 
 function BuiltAroundYou() {
     const processSteps = [
-        { icon: Car, title: 'Choose', subtitle: 'your car', number: '1' },
-        { icon: Building2, title: 'We buy', subtitle: 'it for you', number: '2' },
-        { icon: CreditCard, title: 'You pay', subtitle: 'back in installments', number: '3' },
-        { icon: PartyPopper, title: 'You own', subtitle: 'it', number: '4' }
+        { icon: Search, title: '1. Вы выбираете', subtitle: 'Авто из партнерского автосалона', number: '1' },
+        { icon: FileText, title: '2. Мы приообретаем', subtitle: 'И передаем вам в пользование', number: '2' },
+        { icon: CreditCard, title: '3. Вносите платежи', subtitle: 'Ежемесячно до конца срока', number: '3' },
+        { icon: PartyPopper, title: '4. Автомобиль ваш', subtitle: 'После погашения всех выплат', number: '4' }
     ];
 
     return (
@@ -17,21 +17,19 @@ function BuiltAroundYou() {
                 <div className="built-grid">
                     <motion.div
                         className="content-side"
-                        initial={{ opacity: 0, x: -50 }}
+                        initial={{ opacity: 1, x: 0 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
                         <h2 className="section-title">
-                            Car finance built<br />
-                            <span className="text-primary">around you</span>
+                            Как работает<br />
+                            <span className="text-primary">исламский лизинг?</span>
                         </h2>
-                        <p className="mt-3">
-                            We understand that everyone's financial situation is unique.
-                            That's why we offer flexible, Sharia-compliant financing solutions
-                            tailored to your needs.
+                        <p className="mt-3" style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#555' }}>
+                            Понятная схема: вы пользуетесь автомобилем на условиях лизинга, вносите арендные платежи, а после завершения договора автомобиль переходит в вашу собственность.
                         </p>
-                        <button className="btn btn-primary mt-4">Get started</button>
+                        <button className="btn btn-primary mt-4" onClick={() => window.location.href = '/#application-form'}>Оставить заявку</button>
 
                         <div className="floating-elements">
                             <motion.div
@@ -46,19 +44,19 @@ function BuiltAroundYou() {
 
                     <motion.div
                         className="chart-side"
-                        initial={{ opacity: 0, x: 50 }}
+                        initial={{ opacity: 1, x: 0 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
                         <div className="chart-container">
                             <motion.div
-                                initial={{ opacity: 0, y: 10 }}
+                                initial={{ opacity: 1, y: 0 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.3 }}
                                 className="tab-content"
                             >
-                                <h3 className="tab-title">How does Islamic financing work?</h3>
+                                {/* Card Content */}
 
                                 {/* Process Steps */}
                                 <div className="process-steps">
@@ -68,9 +66,9 @@ function BuiltAroundYou() {
                                                 <div className="step-icon">
                                                     <step.icon size={32} />
                                                 </div>
-                                                <div className="step-number">{step.number}</div>
-                                                <div className="step-title">{step.title}</div>
-                                                <div className="step-subtitle">{step.subtitle}</div>
+                                                <div className="step-number" style={{ display: 'none' }}>{step.number}</div>
+                                                <div className="step-title" style={{ fontSize: '1.1rem', fontWeight: 700, margin: '15px 0 5px 0', whiteSpace: 'normal', lineHeight: '1.3' }}>{step.title}</div>
+                                                <div className="step-subtitle" style={{ fontSize: '0.85rem', whiteSpace: 'normal', lineHeight: '1.4', color: '#777' }}>{step.subtitle}</div>
                                             </div>
                                             {index < processSteps.length - 1 && (
                                                 <div className="step-arrow">→</div>
@@ -83,15 +81,15 @@ function BuiltAroundYou() {
                                 <div className="benefits-row">
                                     <div className="benefit-item">
                                         <Check size={18} className="benefit-icon" />
-                                        <span>No interest (Riba-free)</span>
+                                        <span>Без скрытых процентов (Без Риба)</span>
                                     </div>
                                     <div className="benefit-item">
                                         <Check size={18} className="benefit-icon" />
-                                        <span>100% Sharia-compliant</span>
+                                        <span>100% Соответствие Шариату</span>
                                     </div>
                                     <div className="benefit-item">
                                         <Check size={18} className="benefit-icon" />
-                                        <span>Transparent pricing</span>
+                                        <span>Прозрачные условия</span>
                                     </div>
                                 </div>
                             </motion.div>
